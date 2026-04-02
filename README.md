@@ -44,17 +44,31 @@ Pronto. As skills `/landing` e `/landing-review` estão disponíveis em qualquer
 ### Criar uma landing page do zero
 
 ```bash
-# 1. Crie uma pasta para o projeto
-mkdir minha-landing && cd minha-landing
+# Crie uma pasta para o projeto (em qualquer lugar)
+mkdir ~/minha-landing && cd ~/minha-landing
 
-# 2. Copie as regras do projeto
-cp /caminho/do/kit/project-template/CLAUDE.md .
-
-# 3. Abra o Claude Code
+# Abra o Claude Code e chame a skill
 claude
-
-# 4. Use a skill
 ```
+
+Dentro do Claude Code:
+```
+/landing crie uma landing page para X
+```
+
+Pronto. Não precisa copiar nenhum arquivo — as skills são globais.
+
+---
+
+### (Opcional) Reforçar regras para prompts livres
+
+Se quiser que as regras de tokens e componentes valham mesmo em conversas sem usar a skill:
+
+```bash
+cp ~/claude-landing-kit/project-template/CLAUDE.md ~/meu-projeto/CLAUDE.md
+```
+
+Isso faz o Claude seguir as regras em qualquer mensagem, não só quando você chama `/landing`.
 
 Dentro do Claude Code:
 
